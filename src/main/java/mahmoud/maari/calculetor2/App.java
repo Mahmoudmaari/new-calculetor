@@ -17,12 +17,7 @@ public class App
     public static void main( String[] args )
     
     {
-    	
-    	
-    	
-    	
-    		
-    	
+    	boolean com = true;
     	double result = 0;
     	
         System.out.println("put operator");
@@ -30,8 +25,6 @@ public class App
     	
     	System.out.println("first number");
     	double num1 = in.nextDouble();
-    	
-    	
     	
     	System.out.println("second number");
     	double num2 = in.nextDouble();
@@ -52,21 +45,11 @@ public class App
         	}
     		
     		break;
-    	default:System.out.println(operator+ " is not supported");
-    	
-    	
-    	
-    	
-    	}
-    	
-    		
+    	default:System.out.println("      " + "("+operator+")" + "  Error put right operator");}
     	System.out.println(result); 
     	
-    	
-    	
-  	    
-    	System.out.println("press any think");
-    	
+
+    	System.out.println("press any key");
     	String com1 = um.nextLine();
     	
     	switch (com1) {
@@ -74,15 +57,10 @@ public class App
     	default :
     	
     	
-    		System.out.println("good bye");
+        System.out.println("good bye");
     	}
-    
-    	
-    	
-  	    }
-    
-    	
-    	}
+  	}
+}
 
 
 	
