@@ -40,6 +40,7 @@ public class App
     			result = num1 / num2;
     		}
     		break;
+    		default : System.out.println("not right opretor");
     		
     		
     		}
