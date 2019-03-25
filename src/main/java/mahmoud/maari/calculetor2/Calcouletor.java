@@ -7,40 +7,36 @@ public class Calcouletor {
 	private String op;
 	private double result;
 	
-	public Calcouletor(double num1, String op, double num2,double result) {
+	public Calcouletor(double num1, String op, double num2) {
 		super();
 		this.num1 = num1;
 		this.num2 = num2;
 		this.op = op;
-		this.result = result;
 	}
 	
-	public double add(double num1,  double num2,double result) {
+	public double add(double num1,  double num2) {
 		this.num1 = num1;
 		this.num2 = num2;
-		this.result = result;
-	 return setResult(num1+num2);
+	 return this.result = num1+num2;
 	}
-	public double sub(double num1,  double num2,double result) {
+	public double sub(double num1,  double num2) {
 		this.num1 = num1;
 		this.num2 = num2;
-		this.result = result;
-		return setResult(num1-num2);
+		return this.result = num1-num2;
 		}
-	public double malt(double num1,  double num2,double result) {
+	public double malt(double num1,  double num2) {
 		this.num1 = num1;
 		this.num2 = num2;
-		this.result = result;
-		return setResult(num1*num2);
+		return this.result=num1*num2;
 		}
-	public double deva(double num1,  double num2,double result) {
+	public double deva(double num1,  double num2) {
 		this.num1 = num1;
 		this.num2 = num2;
-		this.result = result;
+		
 		if ( num1 == 0 || num2 ==0) {
-			return setResult(0);
+			return this.result = 0;
 		}else {
-			return setResult(num1/num2);
+			return this.result = num1/num2;
 		}
 		}
 	@Override

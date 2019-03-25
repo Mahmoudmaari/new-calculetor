@@ -12,32 +12,36 @@ Scanner ins = new Scanner(System.in);
 		double r=0;
 		while (math) {
 		do {
-		Calcouletor result = new Calcouletor(Num1(), op(), Num2(),r);
+		Calcouletor result = new Calcouletor(num1(), op(), num2());
 		String op = result.getOp();
 		double num1 = result.getNum1();
 		double num2 = result.getNum2();
 		switch(op) {
 		case "+":
-			result.add(num1, num2, r);
+			result.add(num1, num2);
 			System.out.println(result);
-			math=true;
+			run=true;
 			break;
 		case"-":
-			result.sub(num1, num2, r);
+			result.sub(num1, num2);
 			System.out.println(result);
+			run=true;
 			break;
 		case "*":
-			result.malt(num1, num2, r);
+			result.malt(num1, num2);
 			System.out.println(result);
+			run=true;
 			break;
 		case "/":
-			result.deva(num1, num2, r);
+			result.deva(num1, num2);
 			System.out.println(result);
+			run=true;
 			break;
 			default:
 				System.out.println("Not valid oparetion");
+				run=true;
 		}
-		}while(run);
+		}while(!run);
 		System.out.println("Press (y) to continue or any key to end");
 		String answer;
 		switch (answer=ins.nextLine()) {
@@ -57,7 +61,7 @@ Scanner ins = new Scanner(System.in);
 		
 	
 	
-	public double Num1() {
+	public double num1() {
 		double d;
 		System.out.println("But the first number");
 		return d= sc.nextDouble();
@@ -67,7 +71,7 @@ Scanner ins = new Scanner(System.in);
 		System.out.println("but the operator");
 		return o =in.nextLine();
 	}
-	public double Num2() {
+	public double num2() {
 		double d;
 		System.out.println("But the second number");
 		return d= sc.nextDouble();
