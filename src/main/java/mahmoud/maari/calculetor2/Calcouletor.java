@@ -15,28 +15,23 @@ public class Calcouletor {
 	}
 	
 	public double add(double num1,  double num2) {
-		this.num1 = num1;
-		this.num2 = num2;
-	 return this.result = num1+num2;
+	 return result = num1+num2;
 	}
 	public double sub(double num1,  double num2) {
-		this.num1 = num1;
-		this.num2 = num2;
-		return this.result = num1-num2;
+
+		return result = num1-num2;
 		}
 	public double malt(double num1,  double num2) {
-		this.num1 = num1;
-		this.num2 = num2;
-		return this.result=num1*num2;
+		
+		return result=num1*num2;
 		}
 	public double deva(double num1,  double num2) {
-		this.num1 = num1;
-		this.num2 = num2;
+
 		
 		if ( num1 == 0 || num2 ==0) {
-			return this.result = 0;
+			return result = 0;
 		}else {
-			return this.result = num1/num2;
+			return result = num1/num2;
 		}
 		}
 	@Override
