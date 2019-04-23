@@ -3,78 +3,67 @@ package mahmoud.maari.calculetor2;
 import java.util.Scanner;
 
 public class Cases {
-Scanner sc = new Scanner(System.in);
-Scanner in = new Scanner(System.in);
-Scanner ins = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
+	Scanner in = new Scanner(System.in);
+	Scanner ins = new Scanner(System.in);
+
 	public void cases() {
-		boolean run = false,math=true;
-		
-		double r=0;
+		boolean run = false, math = true;
 		while (math) {
-		do {
-		Calcouletor result = new Calcouletor(num1(), op(), num2());
-		String op = result.getOp();
-		double num1 = result.getNum1();
-		double num2 = result.getNum2();
-		switch(op) {
-		case "+":
-			result.add(num1, num2);
-			System.out.println(result);
-			run=true;
-			break;
-		case"-":
-			result.sub(num1, num2);
-			System.out.println(result);
-			run=true;
-			break;
-		case "*":
-			result.malt(num1, num2);
-			System.out.println(result);
-			run=true;
-			break;
-		case "/":
-			result.deva(num1, num2);
-			System.out.println(result);
-			run=true;
-			break;
+			do {
+				Calcouletor result = new Calcouletor();
+				info(result);
+				String op = result.getOp();
+				double num1 = result.getNum1();
+				double num2 = result.getNum2();
+				switch (op) {
+				case "+":
+					result.add(num1, num2);
+					run = true;
+					break;
+				case "-":
+					result.sub(num1, num2);
+					run = true;
+					break;
+				case "*":
+					result.malt(num1, num2);
+					run = true;
+					break;
+				case "/":
+					result.deva(num1, num2);
+					run = true;
+					break;
+				default:
+					System.out.println("Not valid oparetion");
+					run = true;
+				}
+				System.out.println(result);
+			} while (!run);
+			System.out.println("Press (y) to continue or any key to end");
+			String answer= ins.nextLine();
+			switch (answer ) {
+			case "y":
+				math = true;
+				run = true;
+				break;
 			default:
-				System.out.println("Not valid oparetion");
-				run=true;
+				math = false;
+				System.out.println("good bye");
+			}
 		}
-		}while(!run);
-		System.out.println("Press (y) to continue or any key to end");
-		String answer;
-		switch (answer=ins.nextLine()) {
-		case "y": 
-			math =true;
-			run=true;
-			break;
-		default:
-			math=false;
-			System.out.println("good bye");
-		}
-		}
-		}
-				
-		
-		
-		
-	
-	
-	public double num1() {
-		double d;
+	}
+
+	public void info(Calcouletor result) {
 		System.out.println("But the first number");
-		return d= sc.nextDouble();
-	}
-	public String op() {
-		String o ;
+		double num1 = sc.nextDouble();
 		System.out.println("but the operator");
-		return o =in.nextLine();
-	}
-	public double num2() {
-		double d;
+		String op = in.nextLine();
 		System.out.println("But the second number");
-		return d= sc.nextDouble();
+		double num2 = sc.nextDouble();
+
+		result.setNum1(num1);
+		result.setOp(op);
+		result.setNum2(num2);
 	}
-	
+
 }

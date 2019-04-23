@@ -13,6 +13,7 @@ public class Calcouletor {
 		this.num2 = num2;
 		this.op = op;
 	}
+	public Calcouletor() {}
 	
 	public double add(double num1,  double num2) {
 	 return result = num1+num2;
